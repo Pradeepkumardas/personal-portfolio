@@ -1,0 +1,974 @@
+ <!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio of Pradeep Kumar Das - Diploma Student & Full Stack Web Developer. Neo-Brutalism design aesthetic, modern web solutions, and high-impact digital experiences.">
+  <meta name="keywords" content="Portfolio, Pradeep Kumar Das, Diploma Student, Full Stack Developer, Neo Brutalism, Web Developer, React, Node.js, JavaScript, UI UX Designer">
+  <meta name="author" content="Pradeep Kumar Das">
+  <title>Pradeep Kumar Das // Diploma Student & Full Stack Web Developer</title>
+
+  <!-- Favicon SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23D4FF3A'/><text y='70' x='15' font-size='65' font-weight='900' font-family='sans-serif' fill='%23111'>PD</text></svg>">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Neo-Brutalism Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP NAVIGATION BAR
+       ======================================================================== -->
+  <!-- ========================================================================
+       TOP NAVIGATION BAR
+       ======================================================================== -->
+  <nav class="brutal-navbar" id="mainNavbar">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <!-- Logo / Brand -->
+      <a href="#hero" class="brand-logo" aria-label="Pradeep Kumar Das Homepage">
+        <span>pradeep.dev</span>
+        <span class="brand-badge">portfolio</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="d-none d-lg-flex align-items-center gap-1">
+        <a href="#about" class="nav-link-brutal">About</a>
+        <a href="#skills" class="nav-link-brutal">Skills</a>
+        <a href="#projects" class="nav-link-brutal">Projects</a>
+        <a href="#experience" class="nav-link-brutal">Experience</a>
+        <a href="#contact" class="nav-link-brutal">Contact</a>
+      </div>
+
+      <!-- Action Items & Theme Toggle -->
+      <div class="d-flex align-items-center gap-2">
+        <!-- Live Status Pill -->
+        <div class="status-pill d-none d-md-inline-flex">
+          <span class="pulse-dot"></span>
+          <span>Open to Opportunities</span>
+        </div>
+
+        <!-- Dark / Light Mode Switcher -->
+        <button id="themeToggleBtn" class="brutal-btn brutal-btn-sm py-1 px-2" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="#contact" class="brutal-btn brutal-btn-sm brutal-btn-lime py-1 px-3 d-none d-sm-inline-flex">
+          <span>Let's Talk</span>
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       HERO SECTION (Personal Image + Details + Dynamic Role Rotator)
+       ======================================================================== -->
+  <header class="hero-section" id="hero">
+    <div class="container">
+      <div class="row align-items-center g-4 g-lg-5">
+        
+        <!-- Left Column: Details & Bio -->
+        <div class="col-lg-7 text-start">
+          <div class="d-inline-flex align-items-center gap-2 mb-2">
+            <span class="brutal-tag tag-lime">
+              <i class="bi bi-code-slash"></i> Diploma Student & Web Developer
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight-box highlight-lime">Pradeep Kumar Das</span>.<br>
+            Building clean, practical web applications.
+          </h1>
+
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="hero-tagline mono-font">Currently exploring:</span>
+            <span id="roleRotator" class="role-rotator display-font fw-bold fs-6">Frontend & Web Interfaces</span>
+          </div>
+
+          <p class="hero-desc">
+            Computer Engineering diploma student based in Jamshedpur, India. I focus on creating responsive frontends and reliable backends, writing clean, readable code and solving real-world problems.
+          </p>
+
+          <!-- CTAs -->
+          <div class="d-flex flex-wrap gap-2 align-items-center">
+            <a href="#projects" class="brutal-btn brutal-btn-lime">
+              <span>View Projects</span>
+              <i class="bi bi-arrow-right-short fs-5"></i>
+            </a>
+
+            <a href="#contact" class="brutal-btn">
+              <span>Get in Touch</span>
+              <i class="bi bi-send"></i>
+            </a>
+
+            <button id="quickCopyEmailBtn" class="brutal-btn brutal-btn-sm" title="Copy email to clipboard">
+              <i class="bi bi-clipboard"></i>
+              <span id="copyBtnText">Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Hero Metrics / Counters -->
+          <div class="hero-stats-grid mt-3">
+            <div class="stat-box py-2 px-3">
+              <div class="stat-number fs-4">01+</div>
+              <div class="stat-label fs-7">Years Learning & Building</div>
+            </div>
+            <div class="stat-box py-2 px-3">
+              <div class="stat-number fs-4">03+</div>
+              <div class="stat-label fs-7">Featured Projects</div>
+            </div>
+            <div class="stat-box py-2 px-3">
+              <div class="stat-number fs-5">Diploma</div>
+              <div class="stat-label fs-7">Computer Engineering</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Personal Image -->
+        <div class="col-lg-5 text-center">
+          <div class="hero-image-container">
+            
+            <div class="hero-image-frame" title="Pradeep Kumar Das - Full Stack Developer">
+              <img src="assets/images/hero-avatar.jpg" alt="Pradeep Kumar Das - Full Stack Developer" id="userHeroImage" loading="eager">
+            </div>
+
+            <div class="hero-badge-corner text-start">
+              <div class="fw-bold fs-7 lh-1">Pradeep Kumar Das</div>
+              <div class="mono-font fs-8 text-muted mt-1">Full Stack Developer</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       TECH MARQUEE TICKER (Clean Minimalist Ribbon)
+       ======================================================================== -->
+  <section class="marquee-container" aria-label="Technologies Marquee">
+    <div class="marquee-track">
+      <span class="marquee-item"><i class="bi bi-dot"></i> HTML5</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> CSS3</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> JavaScript</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> React.js</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> Python</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> Django</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> MySQL</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> Bootstrap 5</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> C / C++</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> Data Structures</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> Git & GitHub</span>
+      <!-- Repeated for smooth loop -->
+      <span class="marquee-item"><i class="bi bi-dot"></i> HTML5</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> CSS3</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> JavaScript</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> React.js</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> Python</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> Django</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> MySQL</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> Bootstrap 5</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> C / C++</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> Data Structures</span>
+      <span class="marquee-item"><i class="bi bi-dot"></i> Git & GitHub</span>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ABOUT ME SECTION (Bento Grid)
+       ======================================================================== -->
+  <!-- ========================================================================
+       ABOUT ME SECTION (Bento Grid)
+       ======================================================================== -->
+  <section class="section-wrapper" id="about">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="mb-4">
+        <span class="section-label">// About Me</span>
+        <h2 class="section-title">Background & Approach</h2>
+        <p class="section-subtitle">Bridging computer engineering fundamentals with practical full-stack web development.</p>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="row g-4">
+        
+        <!-- Big Card: Journey & Principles -->
+        <div class="col-lg-8">
+          <div class="bento-card-main">
+            
+            <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+              <span class="brutal-tag tag-lime">Student & Developer</span>
+              <span class="mono-font text-muted fs-7">Jamshedpur, Jharkhand, India</span>
+            </div>
+
+            <h3 class="display-font fs-4 fw-bold mb-3 lh-sm">
+              Focused on writing clean code and creating intuitive user experiences.
+            </h3>
+
+            <p class="mb-4 text-muted">
+              I am currently pursuing my Diploma in Computer Engineering. Over the past year, I have focused on translating classroom concepts into working web applications. I care about readable architecture, clean APIs, responsive layouts, and understanding how modern software works from the database to the browser.
+            </p>
+
+            <!-- 4-Card Philosophy Grid -->
+            <div class="row g-3 mb-3">
+              
+              <div class="col-sm-6">
+                <div class="philosophy-card">
+                  <div class="philosophy-header">
+                    <div class="philosophy-icon philosophy-icon-lime"><i class="bi bi-shield-check"></i></div>
+                    <span class="philosophy-badge">CODE QUALITY</span>
+                  </div>
+                  <h4 class="fs-6 fw-bold mb-1">Clean Architecture</h4>
+                  <p class="fs-7 text-muted mb-0">Modular components, semantic HTML, structured styling, and organized Git commits.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="philosophy-card">
+                  <div class="philosophy-header">
+                    <div class="philosophy-icon philosophy-icon-coral"><i class="bi bi-layout-text-window-reverse"></i></div>
+                    <span class="philosophy-badge">FRONTEND</span>
+                  </div>
+                  <h4 class="fs-6 fw-bold mb-1">Responsive Design</h4>
+                  <p class="fs-7 text-muted mb-0">Fluid layouts, accessible typography, and smooth interfaces that work across all screens.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="philosophy-card">
+                  <div class="philosophy-header">
+                    <div class="philosophy-icon philosophy-icon-cyan"><i class="bi bi-diagram-3-fill"></i></div>
+                    <span class="philosophy-badge">LOGIC</span>
+                  </div>
+                  <h4 class="fs-6 fw-bold mb-1">Core Fundamentals</h4>
+                  <p class="fs-7 text-muted mb-0">Solid foundations in C, C++, Python, and Data Structures for clean algorithmic problem-solving.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="philosophy-card">
+                  <div class="philosophy-header">
+                    <div class="philosophy-icon philosophy-icon-purple"><i class="bi bi-hdd-network"></i></div>
+                    <span class="philosophy-badge">BACKEND</span>
+                  </div>
+                  <h4 class="fs-6 fw-bold mb-1">Full-Stack Integration</h4>
+                  <p class="fs-7 text-muted mb-0">Connecting frontend interfaces with Python, Django, Node.js, and relational MySQL databases.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Tags -->
+            <div class="d-flex flex-wrap gap-2 mt-auto pt-3 border-top border-1">
+              <span class="brutal-tag"><i class="bi bi-mortarboard me-1"></i> Diploma in CS / Engg</span>
+              <span class="brutal-tag"><i class="bi bi-git me-1"></i> Git Version Control</span>
+              <span class="brutal-tag"><i class="bi bi-code-slash me-1"></i> Web Development</span>
+              <span class="brutal-tag"><i class="bi bi-lightbulb me-1"></i> Eager Learner</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Top Card: Highlights -->
+        <div class="col-lg-4">
+          <div class="d-flex flex-column gap-3 h-100">
+            
+            <!-- Card 1: Learning Focus -->
+            <div class="bento-card-accent-1 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="mono-font fw-bold fs-7 text-muted">// CURRENT FOCUS</span>
+                  <i class="bi bi-book-half fs-5 text-primary"></i>
+                </div>
+                <h3 class="display-font fs-5 fw-bold mb-2">Continuous Learning</h3>
+                <p class="fs-7 text-muted mb-3">
+                  Deepening my skills in full-stack architecture, relational database design, and building practical projects.
+                </p>
+                
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="brutal-tag tag-lime">Python & Django</span>
+                  <span class="brutal-tag">React.js</span>
+                  <span class="brutal-tag">MySQL</span>
+                </div>
+              </div>
+
+              <a href="#projects" class="brutal-btn brutal-btn-sm w-100 mt-2 d-flex justify-content-between align-items-center">
+                <span>View Projects</span>
+                <i class="bi bi-arrow-right-short fs-5"></i>
+              </a>
+            </div>
+
+            <!-- Card 2: Opportunities & Availability -->
+            <div class="bento-card-accent-2 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="mono-font fw-bold fs-7 text-muted">// STATUS</span>
+                  <i class="bi bi-check-circle fs-5 text-success"></i>
+                </div>
+                <h3 class="display-font fs-5 fw-bold mb-2">Open to Opportunities</h3>
+                <p class="fs-7 text-muted mb-3">
+                  Looking for student internships, junior developer roles, and open-source collaborations where I can contribute and learn.
+                </p>
+                
+                <div class="mono-font fs-7 p-2 border border-1 text-center mb-2 d-flex align-items-center justify-content-center">
+                  <span class="live-pulse-dot"></span>
+                  Status: <span class="text-success fw-bold ms-1">Available for Hire</span>
+                </div>
+              </div>
+
+              <a href="#contact" class="brutal-btn brutal-btn-sm brutal-btn-lime w-100 d-flex justify-content-between align-items-center">
+                <span>Let's Connect</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Feature Perks Strip under Bento -->
+      <div class="about-perks-strip">
+        <div class="perk-box">
+          <div class="perk-icon text-success"><i class="bi bi-check2-circle"></i></div>
+          <div>
+            <div class="fw-bold fs-7 font-display">Clean & Maintainable</div>
+            <div class="fs-8 text-muted mono-font">Readable code & organized structure</div>
+          </div>
+        </div>
+        <div class="perk-box">
+          <div class="perk-icon text-primary"><i class="bi bi-speedometer2"></i></div>
+          <div>
+            <div class="fw-bold fs-7 font-display">Fast & Responsive</div>
+            <div class="fs-8 text-muted mono-font">Mobile-friendly & fast loading</div>
+          </div>
+        </div>
+        <div class="perk-box">
+          <div class="perk-icon text-warning"><i class="bi bi-chat-heart"></i></div>
+          <div>
+            <div class="fw-bold fs-7 font-display">Clear Communication</div>
+            <div class="fs-8 text-muted mono-font">Reliable updates & team collaboration</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SKILLS & TECH ARSENAL SECTION
+       ======================================================================== -->
+  <section class="section-wrapper bg-card-alt border-top border-bottom border-1 border-dark" id="skills">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="row align-items-end mb-4">
+        <div class="col-lg-8">
+          <span class="section-label">// Skills</span>
+          <h2 class="section-title">Technologies & Tools</h2>
+          <p class="section-subtitle">Languages, libraries, and tools I use to build responsive, accessible web projects.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-2 mt-lg-0">
+          <span class="brutal-tag tag-lime">
+            <i class="bi bi-stack me-1"></i> Core Stack
+          </span>
+        </div>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="row g-3">
+        
+        <!-- Category 1: Frontend -->
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-category-card">
+            <div class="skill-header">
+              <h3 class="fs-6 fw-bold mb-0">Frontend</h3>
+              <i class="bi bi-window-fullscreen text-primary"></i>
+            </div>
+            <div class="skill-badge-group">
+              <span class="skill-chip"><i class="bi bi-code-slash"></i> React.js</span>
+              <span class="skill-chip"><i class="bi bi-filetype-js"></i> JavaScript (ES6+)</span>
+              <span class="skill-chip"><i class="bi bi-filetype-html"></i> HTML5</span>
+              <span class="skill-chip"><i class="bi bi-filetype-css"></i> CSS3</span>
+              <span class="skill-chip"><i class="bi bi-bootstrap"></i> Bootstrap 5</span>
+              <span class="skill-chip"><i class="bi bi-brush"></i> Tailwind CSS</span>
+              <span class="skill-chip"><i class="bi bi-phone"></i> Responsive UI</span>
+              <span class="skill-chip"><i class="bi bi-box"></i> Vite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Backend -->
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-category-card">
+            <div class="skill-header">
+              <h3 class="fs-6 fw-bold mb-0">Backend</h3>
+              <i class="bi bi-hdd-network text-danger"></i>
+            </div>
+            <div class="skill-badge-group">
+              <span class="skill-chip"><i class="bi bi-filetype-py"></i> Python</span>
+              <span class="skill-chip"><i class="bi bi-lightning"></i> Django</span>
+              <span class="skill-chip"><i class="bi bi-server"></i> Node.js</span>
+              <span class="skill-chip"><i class="bi bi-arrow-repeat"></i> RESTful APIs</span>
+              <span class="skill-chip"><i class="bi bi-code"></i> Express.js</span>
+              <span class="skill-chip"><i class="bi bi-shield-lock"></i> Auth & JWT</span>
+              <span class="skill-chip"><i class="bi bi-arrow-left-right"></i> CRUD Logic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Database & Tools -->
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-category-card">
+            <div class="skill-header">
+              <h3 class="fs-6 fw-bold mb-0">Databases & Tools</h3>
+              <i class="bi bi-database-check text-warning"></i>
+            </div>
+            <div class="skill-badge-group">
+              <span class="skill-chip"><i class="bi bi-database"></i> MySQL</span>
+              <span class="skill-chip"><i class="bi bi-layers"></i> PostgreSQL</span>
+              <span class="skill-chip"><i class="bi bi-circle"></i> MongoDB</span>
+              <span class="skill-chip"><i class="bi bi-git"></i> Git & GitHub</span>
+              <span class="skill-chip"><i class="bi bi-terminal"></i> Linux / CLI</span>
+              <span class="skill-chip"><i class="bi bi-send"></i> Postman</span>
+              <span class="skill-chip"><i class="bi bi-box-seam"></i> npm</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Fundamentals -->
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-category-card">
+            <div class="skill-header">
+              <h3 class="fs-6 fw-bold mb-0">Fundamentals</h3>
+              <i class="bi bi-mortarboard text-success"></i>
+            </div>
+            <div class="skill-badge-group">
+              <span class="skill-chip"><i class="bi bi-diagram-3"></i> Data Structures</span>
+              <span class="skill-chip"><i class="bi bi-cpu"></i> Algorithms</span>
+              <span class="skill-chip"><i class="bi bi-code-square"></i> C / C++</span>
+              <span class="skill-chip"><i class="bi bi-check2-circle"></i> OOP Concepts</span>
+              <span class="skill-chip"><i class="bi bi-search"></i> Problem Solving</span>
+              <span class="skill-chip"><i class="bi bi-file-code"></i> Clean Code</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FEATURED PROJECTS SECTION (Interactive Filter + Modals)
+       ======================================================================== -->
+  <section class="section-wrapper" id="projects">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-3">
+        <div>
+          <span class="section-label">// Featured Work</span>
+          <h2 class="section-title">Recent Projects</h2>
+          <p class="section-subtitle">A collection of web applications built to solve problems, practice modern architectures, and build usable tools.</p>
+        </div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="project-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects [3]</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="ai-tools">Web Tools</button>
+        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="row g-4" id="projectGrid">
+        
+        <!-- Project 1: Forge Analytics -->
+        <div class="col-lg-4 col-md-6 project-item" data-category="fullstack">
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="assets/images/project-1.jpg" alt="Forge Analytics Dashboard Mockup" loading="lazy">
+              <span class="brutal-tag tag-lime project-badge-corner">Full Stack</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Forge Analytics</h3>
+              <p class="project-desc">
+                Interactive personal finance and metrics dashboard delivering live telemetry, revenue tracking, and custom data visualizations.
+              </p>
+              <div class="project-tags">
+                <span class="brutal-tag">React</span>
+                <span class="brutal-tag">Python / API</span>
+                <span class="brutal-tag">PostgreSQL</span>
+              </div>
+              <div class="project-footer-btns mt-auto">
+                <button class="brutal-btn brutal-btn-sm brutal-btn-lime flex-grow-1 open-project-modal" 
+                        data-title="Forge Analytics"
+                        data-desc="Forge Analytics is a full-stack dashboard designed for tracking financial performance and real-time data metrics. It features interactive Chart.js visualizations, modular state management, REST API endpoints, and responsive layout controls."
+                        data-tech="React, JavaScript, FastAPI / Python, PostgreSQL, Chart.js"
+                        data-img="assets/images/project-1.jpg"
+                        data-live="#"
+                        data-github="#">
+                  <span>Details</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </button>
+                <a href="#contact" class="brutal-btn brutal-btn-sm" title="Discuss a similar project">
+                  <i class="bi bi-chat-dots"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: PromptFlow Studio -->
+        <div class="col-lg-4 col-md-6 project-item" data-category="ai-tools">
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="assets/images/project-2.jpg" alt="PromptFlow AI Studio UI Mockup" loading="lazy">
+              <span class="brutal-tag tag-purple project-badge-corner text-white">Web Tool</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">PromptFlow Studio</h3>
+              <p class="project-desc">
+                Node-based visual workflow editor for chaining prompts, comparing language model responses, and testing interactive automation sequences.
+              </p>
+              <div class="project-tags">
+                <span class="brutal-tag">Next.js</span>
+                <span class="brutal-tag">JavaScript</span>
+                <span class="brutal-tag">Node UI</span>
+              </div>
+              <div class="project-footer-btns mt-auto">
+                <button class="brutal-btn brutal-btn-sm brutal-btn-purple text-white flex-grow-1 open-project-modal"
+                        data-title="PromptFlow Studio"
+                        data-desc="An interactive visual workflow tool built to experiment with prompt chaining and AI APIs. Users can connect modular nodes, tweak parameters in real-time, test prompt logic, and inspect results in a clean dashboard."
+                        data-tech="Next.js, React Flow, Python API, WebSockets"
+                        data-img="assets/images/project-2.jpg"
+                        data-live="#"
+                        data-github="#">
+                  <span>Details</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </button>
+                <a href="#contact" class="brutal-btn brutal-btn-sm" title="Discuss a similar project">
+                  <i class="bi bi-chat-dots"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: HyperStreet Store -->
+        <div class="col-lg-4 col-md-6 project-item" data-category="ecommerce">
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="assets/images/project-3.jpg" alt="HyperStreet E-commerce Mockup" loading="lazy">
+              <span class="brutal-tag tag-coral project-badge-corner text-white">E-Commerce</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">HyperStreet Store</h3>
+              <p class="project-desc">
+                Modern responsive apparel storefront with interactive product filtering, shopping cart drawer, and a streamlined checkout workflow.
+              </p>
+              <div class="project-tags">
+                <span class="brutal-tag">Node.js</span>
+                <span class="brutal-tag">Bootstrap 5</span>
+                <span class="brutal-tag">MongoDB</span>
+              </div>
+              <div class="project-footer-btns mt-auto">
+                <button class="brutal-btn brutal-btn-sm brutal-btn-coral text-white flex-grow-1 open-project-modal"
+                        data-title="HyperStreet Store"
+                        data-desc="A full-featured e-commerce frontend and backend application. Features dynamic product catalogs, category filtering, persistent shopping cart state, and an intuitive responsive checkout interface."
+                        data-tech="Node.js, Express, MongoDB, Bootstrap 5, JavaScript"
+                        data-img="assets/images/project-3.jpg"
+                        data-live="#"
+                        data-github="#">
+                  <span>Details</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </button>
+                <a href="#contact" class="brutal-btn brutal-btn-sm" title="Discuss a similar project">
+                  <i class="bi bi-chat-dots"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       WORK EXPERIENCE & TIMELINE
+       ======================================================================== -->
+  <section class="section-wrapper bg-card-alt border-top border-bottom border-1 border-dark" id="experience">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="mb-4">
+        <span class="section-label">// Journey</span>
+        <h2 class="section-title">Education & Experience</h2>
+        <p class="section-subtitle">My academic coursework, independent project development, and community learning.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          
+          <!-- Timeline Item 1 -->
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role mb-0">Diploma in Computer Engineering</h3>
+                <span class="timeline-company">@ STATE BOARD OF TECHNICAL EDUCATION</span>
+              </div>
+              <span class="timeline-period">2024 — PRESENT</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Pursuing foundational curriculum in Data Structures, Algorithms, Computer Architecture, and Relational Database Systems.</li>
+              <li>Consistently applying theory to practical programming labs and software assignments.</li>
+              <li>Actively learning modern full-stack web technologies alongside core syllabus.</li>
+            </ul>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role mb-0">Full Stack Web Projects</h3>
+                <span class="timeline-company">@ INDEPENDENT & ACADEMIC</span>
+              </div>
+              <span class="timeline-period">2024 — PRESENT</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Engineered responsive web applications and full-stack solutions using HTML5, CSS3, JavaScript, React, and Python / Django.</li>
+              <li>Designed RESTful API endpoints, managed state, and optimized database queries with MySQL and PostgreSQL.</li>
+              <li>Emphasized clean responsive layouts, accessible typography, and fast page load times.</li>
+            </ul>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role mb-0">Frontend Practice & Community Learning</h3>
+                <span class="timeline-company">@ STUDENT DEVELOPER COMMUNITY</span>
+              </div>
+              <span class="timeline-period">2023 — 2024</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Built UI components and frontend widgets using vanilla JavaScript and modern CSS features.</li>
+              <li>Participated in student hackathons and rapid prototyping sessions under deadlines.</li>
+              <li>Developed proficiency in Git version control, GitHub pull requests, and dev tools.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       WORK PRINCIPLES / HOW I WORK
+       ======================================================================== -->
+  <section class="section-wrapper" id="principles">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="mb-4 text-center">
+        <span class="section-label mx-auto">// Principles</span>
+        <h2 class="section-title">How I Approach Development</h2>
+        <p class="section-subtitle mx-auto">Core habits and standards I follow when writing code and building interfaces.</p>
+      </div>
+
+      <div class="row g-3">
+        
+        <div class="col-md-4">
+          <div class="quote-card">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-code-slash text-primary fs-5"></i>
+              <span class="mono-font fs-7 fw-bold text-muted">// CODE QUALITY</span>
+            </div>
+            <h4 class="fs-6 fw-bold mb-2">Readable & Maintainable</h4>
+            <p class="fs-7 text-muted mb-0">
+              I believe code is read more often than written. I prioritize clear naming conventions, modular components, and structured Git commits so projects are easy to understand and extend.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="quote-card">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-speedometer2 text-danger fs-5"></i>
+              <span class="mono-font fs-7 fw-bold text-muted">// USER EXPERIENCE</span>
+            </div>
+            <h4 class="fs-6 fw-bold mb-2">Fast & Functional</h4>
+            <p class="fs-7 text-muted mb-0">
+              Good software feels effortless. I focus on fast load times, accessible layouts, responsive navigation, and clean aesthetics that let users accomplish their tasks without distraction.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="quote-card">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-arrow-repeat text-success fs-5"></i>
+              <span class="mono-font fs-7 fw-bold text-muted">// GROWTH MINDSET</span>
+            </div>
+            <h4 class="fs-6 fw-bold mb-2">Curious & Adaptable</h4>
+            <p class="fs-7 text-muted mb-0">
+              Technology moves quickly. I stay humble, welcome constructive feedback, and enjoy learning new tools and patterns to steadily improve with every project I tackle.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONTACT & CONNECT SECTION
+       ======================================================================== -->
+  <section class="section-wrapper" id="contact">
+    <div class="container">
+      
+      <div class="contact-container">
+        
+        <div class="row g-4">
+          
+          <!-- Left Info Column -->
+          <div class="col-lg-5">
+            <span class="section-label">// Contact</span>
+            <h2 class="display-font fs-3 fw-bold mb-2">
+              Let's start a conversation.
+            </h2>
+            <p class="text-muted fs-7 mb-4">
+              Have an internship opportunity, a project to collaborate on, or just want to chat about web development? Feel free to reach out.
+            </p>
+
+            <!-- Email Card -->
+            <div class="contact-info-card">
+              <div class="mono-font fs-7 fw-bold text-muted mb-1">// EMAIL</div>
+              <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap">
+                <span class="mono-font fw-semibold fs-7" id="emailAddressText">pradeepdas.dev@gmail.com</span>
+                <div class="d-flex gap-2">
+                  <a href="mailto:pradeepdas.dev@gmail.com" class="brutal-btn brutal-btn-sm" title="Open in Email App">
+                    <i class="bi bi-envelope"></i>
+                  </a>
+                  <button class="brutal-btn brutal-btn-sm brutal-btn-lime" id="copyContactEmailBtn" title="Copy Email">
+                    <i class="bi bi-clipboard"></i> Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location & Availability Card -->
+            <div class="contact-info-card">
+              <div class="mono-font fs-7 fw-bold text-muted mb-1">// LOCATION & STATUS</div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-geo-alt text-danger fs-6"></i>
+                <span class="fs-7 fw-bold">Jamshedpur, Jharkhand, India</span>
+              </div>
+              <div class="mono-font fs-7 text-muted">
+                Status: <span class="text-success fw-bold">● Available for Internships</span>
+              </div>
+            </div>
+
+            <!-- Professional Social Links -->
+            <div class="mono-font fs-7 fw-bold text-muted mb-2">// PROFILES</div>
+            <div class="social-grid">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-card social-github" title="GitHub Profile">
+                <i class="bi bi-github fs-6"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-card social-linkedin" title="LinkedIn Profile">
+                <i class="bi bi-linkedin fs-6 text-primary"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Form Column -->
+          <div class="col-lg-7">
+            <div class="brutal-card-static">
+              
+              <h3 class="display-font fs-5 fw-bold mb-1">
+                Send a Message
+              </h3>
+              <p class="fs-7 text-muted mb-3">Fill out the form below and I'll get back to you promptly.</p>
+
+              <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                <!-- Web3Forms Hidden Section -->
+                <input type="hidden" name="access_key" value="4b4ec207-ea04-4805-a371-7e9d126292e8">
+                <input type="hidden" name="subject" value="New Portfolio Message - Pradeep.dev">
+                <input type="hidden" name="from_name" value="Pradeep Portfolio Website">
+                <input type="checkbox" name="botcheck" class="d-none" style="display: none;">
+
+                <div class="row g-3">
+                  
+                  <div class="col-md-6">
+                    <label for="contactName" class="mono-font fw-semibold fs-7 mb-1">Your Name *</label>
+                    <input type="text" name="name" id="contactName" class="form-control-brutal" placeholder="e.g. John Doe" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="contactEmail" class="mono-font fw-semibold fs-7 mb-1">Your Email *</label>
+                    <input type="email" name="email" id="contactEmail" class="form-control-brutal" placeholder="john@example.com" required>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="contactService" class="mono-font fw-semibold fs-7 mb-1">Topic *</label>
+                    <select name="inquiry_type" id="contactService" class="form-control-brutal">
+                      <option value="Internship / Full-time Junior Role" selected>Internship / Junior Role</option>
+                      <option value="Full Stack Web Project">Full Stack Web Project</option>
+                      <option value="Frontend / UI Design">Frontend / UI Design</option>
+                      <option value="General Inquiry / Collaboration">General Inquiry / Chat</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="contactMessage" class="mono-font fw-semibold fs-7 mb-1">Your Message *</label>
+                    <textarea name="message" id="contactMessage" rows="4" class="form-control-brutal" placeholder="Tell me about your project, role, or what you'd like to discuss..." required></textarea>
+                  </div>
+
+                  <div class="col-12 mt-3">
+                    <button type="submit" id="submitBtn" class="brutal-btn brutal-btn-lime px-4 py-2 fs-7 d-inline-flex align-items-center gap-2">
+                      <span>Send Message</span>
+                      <i class="bi bi-arrow-right fs-6"></i>
+                    </button>
+                  </div>
+
+                </div>
+              </form>
+
+              <!-- Success Alert Box (hidden initially) -->
+              <div id="formSuccessAlert" class="mt-3 p-3 bg-white border border-1 border-dark d-none" style="box-shadow: 2px 2px 0 #111; border-radius: 6px;">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-check-circle-fill fs-3 text-success"></i>
+                  <div>
+                    <h4 class="fs-6 fw-bold mb-1">Message Sent Successfully!</h4>
+                    <p class="fs-7 text-muted mb-0">Thank you for reaching out. I have received your message and will reply soon.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="brutal-footer">
+    <div class="container">
+      
+      <div class="row align-items-center justify-content-between g-3 pb-3 border-bottom border-1 border-dark">
+        <div class="col-md-6">
+          <div class="brand-logo mb-1">
+            <span>pradeep.dev</span>
+            <span class="brand-badge">portfolio</span>
+          </div>
+          <p class="text-muted fs-7 mb-0">
+            Computer Engineering diploma student building clean, responsive web applications.
+          </p>
+        </div>
+
+        <div class="col-md-6 text-md-end">
+          <a href="#hero" class="brutal-btn brutal-btn-sm brutal-btn-lime">
+            <span>Back to Top</span>
+            <i class="bi bi-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-3 gap-2">
+        <div class="mono-font fs-7 text-muted">
+          © 2026 Pradeep Kumar Das. Designed & built with care.
+        </div>
+        <div class="d-flex gap-3 mono-font fs-7">
+          <a href="#hero" class="text-decoration-none">Top</a>
+          <span>•</span>
+          <a href="#projects" class="text-decoration-none">Projects</a>
+          <span>•</span>
+          <a href="#contact" class="text-decoration-none">Contact</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       PROJECT DETAIL MODAL (Bootstrap 5 Modal)
+       ======================================================================== -->
+  <div class="modal fade" id="projectDetailModal" tabindex="-1" aria-labelledby="modalProjectTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content brutal-modal-content">
+        
+        <div class="modal-header brutal-modal-header">
+          <h3 class="modal-title fs-6 fw-bold" id="modalProjectTitle">Project Preview</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-3 p-md-4">
+          <div class="border border-1 border-dark mb-3 overflow-hidden" style="box-shadow: 2px 2px 0 #111; border-radius: 6px;">
+            <img src="" alt="Project Preview" id="modalProjectImg" style="width: 100%; height: 280px; object-fit: cover;">
+          </div>
+          
+          <h4 class="display-font fs-5 fw-bold mb-2" id="modalDetailTitle">Project Title</h4>
+          <p class="text-muted fs-7" id="modalProjectDesc">Project description goes here...</p>
+
+          <div class="mb-3">
+            <span class="mono-font fw-semibold fs-7 text-muted">// TECH STACK:</span>
+            <div class="p-2 mt-1 border border-1 border-dark bg-card-alt mono-font fs-7" id="modalProjectTech" style="border-radius: 4px;">
+              React, TypeScript, Node.js
+            </div>
+          </div>
+
+          <div class="d-flex gap-2">
+            <a href="#contact" class="brutal-btn brutal-btn-lime flex-grow-1" data-bs-dismiss="modal">
+              <span>Discuss Project</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <button type="button" class="brutal-btn" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FLOATING TOAST NOTIFICATION
+       ======================================================================== -->
+  <div id="brutalToast" class="brutal-toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <i class="bi bi-check2-circle fs-4"></i>
+    <span id="toastMessage">Copied to clipboard!</span>
+  </div>
+
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Custom Portfolio Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
