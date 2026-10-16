@@ -16,7 +16,10 @@ A modern, minimal, and responsive personal portfolio website built with clean **
 - **📬 Working Contact Form (Web3Forms)**:
   - Directly connected to **Web3Forms API** via asynchronous `fetch()`.
   - Built-in form validation, honeypot spam prevention (`botcheck`), loading state spinner, and instant user feedback alerts.
-- **📱 Fully Responsive**: Carefully optimized across mobile phones, tablets, laptops, and ultra-wide desktops.
+- **📱 Fully Responsive Across All Screens**:
+  - Touch-friendly animated mobile navigation drawer with hamburger toggle.
+  - Carefully tested across ultra-small devices (<= 375px), standard mobile (375px-576px), tablets (768px-992px), laptops, and large desktop screens (1200px+).
+  - No horizontal scrolling, fluid image scaling, and finger-friendly tap targets.
 
 ---
 

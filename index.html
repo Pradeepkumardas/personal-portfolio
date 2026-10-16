@@ -64,8 +64,60 @@
           <span>Let's Talk</span>
           <i class="bi bi-arrow-up-right"></i>
         </a>
+
+        <!-- Mobile Menu Toggle Button (Visible on screens < 992px) -->
+        <button id="mobileMenuToggleBtn" class="brutal-btn brutal-btn-sm py-1 px-2 d-lg-none" aria-label="Toggle Navigation Menu" title="Toggle Menu" aria-expanded="false" aria-controls="mobileMenuDrawer">
+          <i class="bi bi-list fs-5" id="mobileMenuIcon"></i>
+        </button>
       </div>
 
+    </div>
+
+    <!-- Mobile Collapsible Navigation Drawer (Visible on screens < 992px) -->
+    <div id="mobileMenuDrawer" class="mobile-nav-drawer d-lg-none" aria-hidden="true">
+      <div class="container py-3">
+        <div class="d-flex flex-column gap-2 mb-3">
+          <a href="#about" class="mobile-nav-link">
+            <span><i class="bi bi-person me-2"></i> About Me</span>
+            <i class="bi bi-chevron-right fs-8 text-muted"></i>
+          </a>
+          <a href="#skills" class="mobile-nav-link">
+            <span><i class="bi bi-tools me-2"></i> Skills & Tools</span>
+            <i class="bi bi-chevron-right fs-8 text-muted"></i>
+          </a>
+          <a href="#projects" class="mobile-nav-link">
+            <span><i class="bi bi-folder2-open me-2"></i> Recent Projects</span>
+            <i class="bi bi-chevron-right fs-8 text-muted"></i>
+          </a>
+          <a href="#experience" class="mobile-nav-link">
+            <span><i class="bi bi-mortarboard me-2"></i> Education & Experience</span>
+            <i class="bi bi-chevron-right fs-8 text-muted"></i>
+          </a>
+          <a href="#principles" class="mobile-nav-link">
+            <span><i class="bi bi-shield-check me-2"></i> Development Principles</span>
+            <i class="bi bi-chevron-right fs-8 text-muted"></i>
+          </a>
+          <a href="#contact" class="mobile-nav-link mobile-nav-link-accent">
+            <span><i class="bi bi-send me-2"></i> Contact & Get in Touch</span>
+            <i class="bi bi-arrow-up-right fs-7"></i>
+          </a>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between pt-2 border-top border-1 border-dark">
+          <div class="status-pill">
+            <span class="pulse-dot"></span>
+            <span class="fs-8">Open to Opportunities</span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="brutal-btn brutal-btn-sm py-1 px-2" title="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="brutal-btn brutal-btn-sm py-1 px-2" title="LinkedIn">
+              <i class="bi bi-linkedin text-primary"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -99,18 +151,18 @@
           </p>
 
           <!-- CTAs -->
-          <div class="d-flex flex-wrap gap-2 align-items-center">
-            <a href="#projects" class="brutal-btn brutal-btn-lime">
+          <div class="d-flex flex-wrap gap-2 align-items-center hero-cta-group">
+            <a href="#projects" class="brutal-btn brutal-btn-lime hero-btn">
               <span>View Projects</span>
               <i class="bi bi-arrow-right-short fs-5"></i>
             </a>
 
-            <a href="#contact" class="brutal-btn">
+            <a href="#contact" class="brutal-btn hero-btn">
               <span>Get in Touch</span>
               <i class="bi bi-send"></i>
             </a>
 
-            <button id="quickCopyEmailBtn" class="brutal-btn brutal-btn-sm" title="Copy email to clipboard">
+            <button id="quickCopyEmailBtn" class="brutal-btn brutal-btn-sm hero-copy-btn" title="Copy email to clipboard">
               <i class="bi bi-clipboard"></i>
               <span id="copyBtnText">Copy Email</span>
             </button>
@@ -760,7 +812,7 @@
             <div class="contact-info-card">
               <div class="mono-font fs-7 fw-bold text-muted mb-1">// EMAIL</div>
               <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap">
-                <span class="mono-font fw-semibold fs-7" id="emailAddressText">pradeepdas.dev@gmail.com</span>
+                <span class="mono-font fw-semibold fs-7 text-break" id="emailAddressText">pradeepdas.dev@gmail.com</span>
                 <div class="d-flex gap-2">
                   <a href="mailto:pradeepdas.dev@gmail.com" class="brutal-btn brutal-btn-sm" title="Open in Email App">
                     <i class="bi bi-envelope"></i>
@@ -843,7 +895,7 @@
                   </div>
 
                   <div class="col-12 mt-3">
-                    <button type="submit" id="submitBtn" class="brutal-btn brutal-btn-lime px-4 py-2 fs-7 d-inline-flex align-items-center gap-2">
+                    <button type="submit" id="submitBtn" class="brutal-btn brutal-btn-lime px-4 py-2 fs-7 d-inline-flex align-items-center gap-2 contact-submit-btn">
                       <span>Send Message</span>
                       <i class="bi bi-arrow-right fs-6"></i>
                     </button>

@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectModal();
   initContactForm();
   initNavbarScrollEffect();
+  initMobileMenu();
 });
 
 /* --------------------------------------------------------------------------
@@ -317,3 +318,68 @@ function initNavbarScrollEffect() {
     }
   }, { passive: true });
 }
+
+/* --------------------------------------------------------------------------
+   9. Mobile Navigation Drawer Controller
+   -------------------------------------------------------------------------- */
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('mobileMenuToggleBtn');
+  const drawer = document.getElementById('mobileMenuDrawer');
+  const icon = document.getElementById('mobileMenuIcon');
+  if (!toggleBtn || !drawer) return;
+
+  function toggleMenu(forceOpen) {
+    const shouldOpen = typeof forceOpen === 'boolean' ? forceOpen : !drawer.classList.contains('open');
+    if (shouldOpen) {
+      drawer.classList.add('open');
+      drawer.setAttribute('aria-hidden', 'false');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      if (icon) {
+        icon.className = 'bi bi-x-lg fs-5';
+      }
+    } else {
+      drawer.classList.remove('open');
+      drawer.setAttribute('aria-hidden', 'true');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      if (icon) {
+        icon.className = 'bi bi-list fs-5';
+      }
+    }
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // Close drawer when any link inside it is tapped
+  const navLinks = drawer.querySelectorAll('.mobile-nav-link, a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      toggleMenu(false);
+    });
+  });
+
+  // Close when tapping outside the navbar
+  document.addEventListener('click', (e) => {
+    const navbar = document.getElementById('mainNavbar');
+    if (navbar && !navbar.contains(e.target) && drawer.classList.contains('open')) {
+      toggleMenu(false);
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      toggleMenu(false);
+    }
+  });
+
+  // Auto-close if screen resized to desktop (>= 992px)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 992 && drawer.classList.contains('open')) {
+      toggleMenu(false);
+    }
+  }, { passive: true });
+}
+
